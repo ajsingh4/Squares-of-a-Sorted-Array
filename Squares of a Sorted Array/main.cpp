@@ -8,26 +8,22 @@
 
 #include <iostream>
 #include <vector>
+#include <set>
 
 using namespace std;
 
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& A) {
-        vector<int> B;
+        set<int> B;
+        vector<int> C;
         for(int i=0; i<A.size();i++){
-            B.push_back(A[i]*A[i]);
+            B.insert(A[i]*A[i]);
         }
-        for(int j=0; j<B.size(); j++){
-            for(int k=0; k<B.size(); k++){
-                if(B[j] < B[k]){
-                    int temp = B[j];
-                    B[j] = B[k];
-                    B[k] = temp;
-                }
-            }
+        for(set<int>::iterator it = B.begin(); it != B.end(); it++){
+            C.push_back(*it);
         }
-        return B;
+        return C;
     }
 };
 
