@@ -8,20 +8,24 @@
 
 #include <iostream>
 #include <vector>
-#include <set>
+#include <queue>
 
 using namespace std;
 
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& A) {
-        set<int> B;
+        priority_queue <int> B;
         vector<int> C;
         for(int i=0; i<A.size();i++){
-            B.insert(A[i]*A[i]);
+            B.push(A[i]*A[i]);
         }
-        for(set<int>::iterator it = B.begin(); it != B.end(); it++){
-            C.push_back(*it);
+        for(int j=0; j<A.size();j++){
+            int temp = B.top();
+            
+            //cout << "Top is " << temp << " \n";
+            B.pop();
+            C.push_back(temp);
         }
         return C;
     }
