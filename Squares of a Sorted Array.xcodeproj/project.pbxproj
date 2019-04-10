@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2138C56C225D50B00051E12F /* Squares of a Sorted Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Squares of a Sorted Array"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2138C56F225D50B00051E12F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2138C576225D50C40051E12F /* prompt.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = prompt.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2138C56F225D50B00051E12F /* main.cpp */,
+				2138C576225D50C40051E12F /* prompt.rtf */,
 			);
 			path = "Squares of a Sorted Array";
 			sourceTree = "<group>";
