@@ -8,25 +8,27 @@
 
 #include <iostream>
 #include <vector>
-#include <queue>
+#include <cmath>
 
 using namespace std;
 
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& A) {
-        priority_queue <int> B;
         vector<int> C;
-        for(int i=0; i<A.size();i++){
-            B.push(A[i]*A[i]);
+        int i = 0;
+        int j = A.size()-1;
+        while (i<=j) {
+            if(abs(A[i]) <= abs(A[j])){
+                C.push_back(A[j]*A[j]);
+                j--;
+            }
+            else{
+                C.push_back(A[i]*A[i]);
+                i++;
+            }
         }
-        for(int j=0; j<A.size();j++){
-            int temp = B.top();
-            
-            //cout << "Top is " << temp << " \n";
-            B.pop();
-            C.push_back(temp);
-        }
+        reverse(C.begin(), C.end());
         return C;
     }
 };
